@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- Bootstrap -->
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+
+        <!-- Fontawesome -->
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+        />
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="assets/style.css">
+
+        <title>Weather Dashboard</title>
+
+    </head>
+
+    <body>
+        <!-- Added nav bar to replace the current header for style -->
+        <nav class="navbar navbar-dark bg-dark">
+
+           <!--title/logo in nav bar -->
+        <a class="navbar-brand" href="#"><h2>Weather Dashboard</h2></a>
+
+    </nav>
+
+    <main> 
+
+        <div class="container my-container"></div>
+        <div class="row my-row"></div>
+        <div class="col my-col"></div>
+        <div class="row my-row"></div>
+
+        <div class="card border-dark" style="width: 100%;">
+        <div class="card-header">Search for a City:</div>
+        <div class="card-body text-dark"></div>    
+        <div class="input-group"></div>    
+
+        <input type="text" class="form-control" placeholder="Enter a City" aria-label="enter city name" aria-describedby="search button">
+
+        <div class="input-group-append search">
+            <button class="btn btn-outline-secondary" type="button" id="search-button">
+                <i class="fas fa-search"></i>
+            </button>    
+
+
+        </div>
+
+        <div class="row my-row"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</main>
+
+</body>
+
+<!-- JQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- moment api library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data-10-year-range.js"></script>
+
+<!-- javascript relative path -->
+<script src="assets/script.js"></script>
+
+</html>
