@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-        <!-- Bootstrap -->
-        <link
-        rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        />
-
-        <!-- Fontawesome -->
-        <link
-        rel="stylesheet"
-        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-        crossorigin="anonymous"
-        />
-
-        <!-- CSS only -->
-        <link rel="stylesheet" href="assets/style.css">
-
-        <title>Weather Dashboard</title>
-
-    </head>
-
-    <body>
-        <!-- Added nav bar to replace the current header for style -->
-        <nav class="navbar navbar-dark bg-dark">
-
-           <!--title/logo in nav bar -->
-        <a class="navbar-brand" href="#"><h2>Weather Dashboard</h2></a>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- Navigator -->
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1 w-100 text-center">Weather Dashboard</span>
     </nav>
-
-    <main> 
-
-        <div class="container my-container"></div>
-        <div class="row my-row"></div>
-        <div class="col my-col"></div>
-        <div class="row my-row"></div>
-
-        <div class="card border-dark" style="width: 100%;">
-        <div class="card-header">Search for a City:</div>
-        <div class="card-body text-dark"></div>    
-        <div class="input-group"></div>    
-
-        <input type="text" class="form-control" placeholder="Enter a City" aria-label="enter city name" aria-describedby="search button">
-
-        <div class="input-group-append search">
-            <button class="btn btn-outline-secondary" type="button" id="search-button">
-                <i class="fas fa-search"></i>
-            </button>    
-
-
+    <!-- Row to search a city -->
+    <div class="container-fluid">
+        <div class="row ">
+        <div class="col-md-3 pl-2" id="citySearch-container">
+        <div class="card-body">
+        <h5>Search for a City:</h5>
+        <div class="form-inline">
+        <div class="form-group">
+        <input type="text" class="form-control" id="searchText">
+        </div>
+        <!-- Search History section -->
+        <button id="search-button" type="submit" class="btn btn-primary"><i
+                class="fas fa-search"></i></button>
+        </div>
+        </div>
         </div>
 
-        <div class="row my-row"></div>
-        <!-- recently searched cities card container - styled to extend to maximum width of its container-->
-        <div class="card border-dark" id="recent-cities" style="width: 100%;">
+        <ul class="list-group"></ul>
 
+        <div class="col-md-8">
+            <div class="row ml-2 border border-light">
+                <div class="col-sm-10" id="present-weather">
+                    <h4 class="city-name" id="present-city"></h4>
+                    <p>Temperature:<span class="present" id="temp"></span></p>
+                    <p>Humidity:<span class="present" id="humid"></span></p>
+                    <p>Wind Speed:<span class="present" id="windspeed"></span></p>
+                    <p>UV index:<span class="present md-danger py-2 px-2 text-white" id="uv-index"></span></p> 
 
+                </div>
+            </div>
+        </div>
+        <!-- Future Forecast Data Here -->
+        <div class="col-md-12" id="coming-weather">
+          <h3>5-Day Forecast:</h3>
+          <div class="row text-dark">
+            <div class="col-md-3 bg- forecast text-white">
+              <p id="tDate0"></p>
+              <p id="tImage0"></p>
+              <p>Temp:<span id="tTemp0"></span></p>
+              <p>Humidity:<span id="tHumidity0"></span></p>
+            </div>
+            <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
+              <p id="tDate1"></p>
+              <p id="tImage1"></p>
+              <p>Temp:<span id="tTemp1"></span></p>
+              <p>Humidity:<span id="tHumidity1"></span></p>
+          </div>   
+          <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
+            <p id="tDate2"></p>
+            <p id="tImage2"></p>
+            <p>Temp:<span id="tTemp2"></span></p>
+            <p>Humidity:<span id="tHumidity2"></span></p>
+        </div>   
+        <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
+          <p id="tDate3"></p>
+          <p id="tImage3"></p>
+          <p>Temp:<span id="tTemp3"></span></p>
+          <p>Humidity:<span id="tHumidity3"></span></p>
+      </div> 
+      <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
+        <p id="tDate4"></p>
+        <p id="tImage4"></p>
+        <p>Temp:<span id="tTemp4"></span></p>
+        <p>Humidity:<span id="tHumidity4"></span></p>
+        </div>     
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>        
 
-
-
-
-
-
-
-
-
-    
-
-
-</main>
-
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   <script src="js/main.js"></script>
 </body>
-
-<!-- JQuery CDN -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- moment api library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.31/moment-timezone-with-data-10-year-range.js"></script>
-
-<!-- javascript relative path -->
-<script src="assets/script.js"></script>
-
 </html>
