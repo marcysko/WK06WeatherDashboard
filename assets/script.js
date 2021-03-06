@@ -104,9 +104,9 @@ function UVI(ln,lt){
                 var tempK= response.list[((i+1)*8)-1].main.temp;
                 var tempF=(((tempK-273.5)*1.80)+32).toFixed(2);
                 var humidity= response.list[((i+1)*8)-1].main.humidity;
-            }
+
         
+                
+            }
         });
     }
-
-    
