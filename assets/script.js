@@ -89,4 +89,10 @@ function UVI(ln,lt){
             });
 }
     // 5 days forecast for the present city
-
+    function fivedayforecast(cityid){
+        var daycomplete= false;
+        var queryforecastURL="https://api.openweathermap.org/data/2.5/forecast?id="+cityid+"&appid="+APIKey;
+        $.ajax({
+            url:queryforecastURL,
+            method:"get"
+        }).then(function(response){
