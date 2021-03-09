@@ -18,82 +18,83 @@
     <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color: black ;color: whitesmoke;">
         <h1>Weather Dashboard</h1>
     </div>
-        
-        <!--Row city search -->
-        <main class="flex-row justify-space-between">
-            <div class="col-12 col-md-4">
-              <div class="card">
-                <h3 class="card-header text-uppercase">Search for a City:</h3>
-                <form id="city-form" class="card-body">
-                  <label class="form-label" for="cityname"></label>
-                  <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input" />
-                  <button class=" btn bg-primary text-light" type="submit" id="search-button"><i class="fa fa-search"></i></button>
-                </form>
-              </div>
-        
-              <!-- List of Searched Cities -->
-            <div class="col-12 col-md-8">
-              <div class="city-name"><span id="city-search-term"></span></h2>
-              <div id="cities-container" class="list-group">
+    
+    <main class="container ml-0 mr-0 mw-100">
+        <div class="row">
+            <div class="col-3 pl-3 pt-2 card card-body bg-light border-0">
+                <h4><strong>Search for a City:</strong></h4>
+                <div class="form-group mb-0">
+                    <div class="input-group">
+                        <!-- Search bar for new cities -->
+                        <input type="search" class="form-control" id="searchCity" style="width: 150px">
+                        <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>            
                 </div>
-              </div>
-            </div>
-
-            <!-- cities searched list -->
-
-
-            <!-- Current weather -->
-        <div class="container">
-        <div class="col-md-8">
-            <div class="row ml-2 border border-light">
-                <div class="col-sm-10" id="present-weather">
-                    <h4 class="city-name" id="present-city"></h4>
-                    <p>Temperature:<span class="present" id="temp"></span></p>
-                    <p>Humidity:<span class="present" id="humid"></span></p>
-                    <p>Wind Speed:<span class="present" id="windspeed"></span></p>
-                    <p>UV index:<span class="present md-danger py-2 px-2 text-white" id="uv-index"></span></p> 
-                        </div>
+                <hr>
+                <div>
+                    
+                    <div id="cityBtn"></div>
                 </div>
             </div>
-            
-                
-                <!--Five day forecast weather layout-->  
-                <div class="container px-5 py-5">
-                    <h2>5 Day Forecast:</h2> 
-                    <div class="row"> 
-                        <div class="col-mx-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
-                            <p id="tDate0"></p>
-                            <p>Temp:<span id="tTemp0"></span></p>
-                            <p>Humidity:<span id="tHumidity0"></span></p>
-                          </div>  
-                          <div class="col-mx-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
-                            <p id="Date1"></p>
-                            <p>Temp:<span id="Temp1"></span></p>
-                            <p>Humidity:<span id="Humidity1"></span></p>
-                          </div>  
-                          <div class="col-mx-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
-                            <p id="Date2"></p>
-                            <p>Temp:<span id="Temp2"></span></p>
-                            <p>Humidity:<span id="Humidity2"></span></p>
-                          </div>  
-                          <div class="col-mx-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
-                            <p id="Date3"></p>
-                            <p>Temp:<span id="Temp3"></span></p>
-                            <p>Humidity:<span id="Humidity3"></span></p>
-                          </div>  
-                          <div class="col-mx-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2" >
-                            <p id="Date4"></p>
-                            <p>Temp:<span id="Temp4"></span></p>
-                            <p>Humidity:<span id="Humidity4"></span></p>
-                        </div>     
-                    </div> 
-              
-
-
-          </main>
+            <!-- Present Weather and Forecast information -->
+            <div class="col-9 card border-0">
+                <div class="row">
+                    <!-- Present weather section -->
+                    <div class="card card-body mx-3 my-3 text-dark">
+                        <div class="city-name mb-1 mt-2 bolder" id="present-city"></div>
+                        <p>Temperature:<span class="present" id="temperature"></span></p>
+                        <p>Humidity:<span class="present" id="humidity"></span></p> 
+                        <p>Wind Speed:<span class="present" id="wind-speed"></span></p>
+                        <p>UV index:<span class="present bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p>
+                    </div>
+                </div>
+                <!-- 5 day forecast section -->
+                <div class="row">
+                    <div>
+                        <h3 class="ml-3 pb-1"><strong>5-Day Forecast:</strong></h3>
+                    </div>
+                </div>
+                <!-- Row for future forecast here -->
+                <div class="row">
+                    <div class="card card-body ml-3 mr-3 px-2 py-2 mw-20 float-left text-white bg-primary">
+                        <h4 class="strong pb-2" id="nday0"></h4>
+                        <p class="py-2" id="nday0I"></p>
+                        <p class="py-2" id="nday0T"></p>
+                        <p class="pt-2" id="nday0H"></p>
+                    </div>
+                    <div class="card card-body ml-3 mr-3 px-2 py-2 mw-20 float-left text-white bg-primary">
+                        <h4 class="strong pb-2" id="nday1"></h4>
+                        <div class="py-2" id="nday1I"></div>
+                        <div class="py-2" id="nday1T"></div>
+                        <div class="pt-2" id="nday1H"></div>
+                    </div>
+                    <div class="card card-body ml-3 mr-3 px-2 py-2 mw-20 float-left text-white bg-primary">
+                        <h4 class="strong pb-2" id="nday2"></h4>
+                        <div class="py-2" id="nday2I"></div>
+                        <div class="py-2" id="nday2T"></div>
+                        <div class="pt-2" id="nday2H"></div>
+                    </div>
+                    <div class="card card-body ml-3 mr-3 px-2 py-2 mw-20 float-left text-white bg-primary">
+                        <h4 class="strong pb-2" id="nday3"></h4>
+                        <div class="py-2" id="nday3I"></div>
+                        <div class="py-2" id="nday3T"></div>
+                        <div class="pt-2" id="nday3H"></div>
+                    </div>
+                    <div class="card card-body ml-3 mr-3 px-2 py-2 mw-20 float-left text-white bg-primary">
+                        <h4 class="strong pb-2" id="nday4"></h4>
+                        <div class="py-2" id="nday4I"></div>
+                        <div class="py-2" id="nday4T"></div>
+                        <div class="pt-2" id="nday4H"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
         
           <!--jQuery JS-->
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
     <!--Code to JavaScript File-->
           <script src="./assets/script.js"></script>
