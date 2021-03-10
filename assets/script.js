@@ -104,16 +104,31 @@ function futureFore() {
     method: "GET"
   }).then(function (response) {
     var day = response.list
-    $("#day1").text(day[2].dt_txt.split(" ")[0])
-    $("#day1Icon").html($("<img src=https://openweathermap.org/img/wn/" + day[2].weather[0].icon + ".png />"))
-    $("#day1Temp").text("Temp: " + ((((day[2].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
-    $("#day1Humid").text("Humidity: " + day[2].main.humidity + "%")
+    $("#nday0").text(day[2].dt_txt.split(" ")[0])
+    $("#nday0I").html($("<img src=https://openweathermap.org/img/wn/" + day[2].weather[0].icon + ".png />"))
+    $("#nday0T").text("Temp: " + ((((day[2].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
+    $("#nday0H").text("Humidity: " + day[2].main.humidity + "%")
 
+    $("#nday1").text(day[10].dt_txt.split(" ")[0])
+    $("#nday1I").html($("<img src=https://openweathermap.org/img/wn/" + day[10].weather[0].icon + ".png />"))
+    $("#nday1T").text("Temp: " + ((((day[10].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
+    $("#nday1H").text("Humidity: " + day[10].main.humidity + "%")
 
+    $("#nday2").text(day[18].dt_txt.split(" ")[0])
+    $("#nday2I").html($("<img src=https://openweathermap.org/img/wn/" + day[18].weather[0].icon + ".png />"))
+    $("#nday2T").text("Temp: " + ((((day[18].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
+    $("#nday2H").text("Humidity: " + day[18].main.humidity + "%")
+
+    $("#nday3").text(day[26].dt_txt.split(" ")[0])
+    $("#nday3I").html($("<img src=https://openweathermap.org/img/wn/" + day[26].weather[0].icon + ".png />"))
+    $("#nday3T").text("Temp: " + ((((day[26].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
+    $("#nday3H").text("Humidity: " + day[26].main.humidity + "%")
+
+    $("#nday4").text(day[34].dt_txt.split(" ")[0])
+    $("#nday4I").html($("<img src=https://openweathermap.org/img/wn/" + day[34].weather[0].icon + ".png />"))
+    $("#nday4T").text("Temp: " + ((((day[34].main.temp) - 273.15) * (9 / 5) + 32).toFixed(1)) + "°F")
+    $("#nday4H").text("Humidity: " + day[34].main.humidity + "%")
   }
-
-
-
   )
 }
 

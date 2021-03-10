@@ -1,17 +1,13 @@
-*{
-    box-sizing: border-box;
-    
-}
 
-body {
-    
-    font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+
+#present-city{
+    font-weight: bolder;
+    font-size: ;
+    color: #212529;
+    font-size: 1.5rem;
 }
-h3{
-    font-weight: bold;
-}
+    
+
 .forecast{
     
     font-size: 0.9em;
