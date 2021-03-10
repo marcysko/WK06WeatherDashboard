@@ -41,7 +41,7 @@ for (var i = 0; i < cities.length; i++) {
         checkCity.attr("id", "cBtn");
         checkCity.attr("city-name", cities[i]);
         checkCity.text(cities[i]);
-        $("#cityButton").append(checkCity);
+        $("#cityBtn").append(checkCity);
         savCities();
       }
     }
@@ -57,6 +57,7 @@ for (var i = 0; i < cities.length; i++) {
       preForecast()
       futureFore()
     })
+    
   
     //Set up the API, create an AJAX call
     function preForecast() {
