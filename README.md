@@ -7,3 +7,5 @@
 - AJAX - make API calls and pull data
 - OpenWeatherMap - API for calling weather forecast data
 - GitHub - hosts repository that can be deployed to GitHub Pages
+
+[![Screen-Shot-2021-03-10-at-7-11-22-PM.png](https://i.postimg.cc/Hk23r4xs/Screen-Shot-2021-03-10-at-7-11-22-PM.png)](https://postimg.cc/Xrr9h5dT)
