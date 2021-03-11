@@ -17,7 +17,7 @@ A website that offers fitness training services.
 - AJAX
 
 ## Website
-
+https://marcysko.github.io/WK06WeatherDashboard/
 
 ## Contribution
 Made with ❤️ by [Marcy S.]
