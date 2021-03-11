@@ -20,6 +20,6 @@ A website that offers fitness training services.
 https://marcysko.github.io/WK06WeatherDashboard/
 
 ## Contribution
-Made with ❤️ by [Marcy S.]
+Made with ❤️ by Marcy S.
 
-### ©️2019 UofA Coding BootCamp, Inc 
+### ©️2021 UofA Coding BootCamp, Inc 
