@@ -3,4 +3,27 @@
     color: #212529;
     font-size: 175%;
 }
-  
+#fav {
+    background-color: green;
+    color: white;
+}
+
+#mod {
+    background-color: yellow;
+    color: black;  
+}
+
+#high {
+    background-color: orange;
+    color: black;
+}
+
+#vHigh {
+    background-color: red;
+    color: white;
+}
+
+#severe {
+    background-color: purple;
+    color: white;
+}

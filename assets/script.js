@@ -81,19 +81,22 @@ for (var i = 0; i < cities.length; i++) {
       method: "GET"
     }).then(function (response) {
       uvi = response.value
-        if (uvi < 3) {
-          $(".uv-index").attr("id", "low");
+        if (uvi < 2.0) {
+          $(".uviButton").attr("id", "fav");
         }
-        if (uvi <= 6 && uvi >=3) {
-          $(".uv-index").attr("id", "med");
+        if (uvi <= 5.0 && uvi >=2.01) {
+          $(".uviButton").attr("id", "mod");
         }
-        if (uvi <= 9 && uvi >=6.01) {
-          $(".uv-index").attr("id", "high");
+        if (uvi <= 6.9 && uvi >=5.9) {
+          $(".uviButton").attr("id", "high");
         }
-        if (uvi > 9) {
-          $(".uv-index").attr("id", "v-high");
+        if (uvi <= 10.9 && uvi >=7.01) {
+          $(".uviButton").attr("id", "vHigh");
         }
-      $(".uv-index").text(uvi)
+        if (uvi > 11) {
+          $(".uviButton").attr("id", "severe");
+        }
+      $(".uviButton").text(uvi)
     })
   })
 };
